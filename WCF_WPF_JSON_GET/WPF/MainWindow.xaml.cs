@@ -24,5 +24,10 @@ namespace WPF
         {
             InitializeComponent();
         }
+
+        private void Getjson_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

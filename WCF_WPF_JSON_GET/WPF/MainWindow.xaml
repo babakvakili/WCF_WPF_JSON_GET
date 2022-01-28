@@ -24,7 +24,7 @@
         <TextBlock Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="3" Background="#221133">
             
         </TextBlock>
-        <Button Grid.Row="3" Grid.Column="1" Content="Get JSON" />
+        <Button Name="getjson" Grid.Row="3" Grid.Column="1" Content="Get JSON" Click="Getjson_Click" />
         <TextBlock Grid.Row="3" Grid.Column="3" Background="#221133" Foreground="White" Text="http://localhost:8833/myservice/getjson"/>
     </Grid>
 </Window>
