@@ -3,13 +3,18 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.Serialization;
 using System.ServiceModel;
+using System.ServiceModel.Web;
 using System.Text;
 
 namespace WPF
 {
-    // NOTE: You can use the "Rename" command on the "Refactor" menu to change the class name "myservice" in both code and config file together.
+    [ServiceBehavior(InstanceContextMode = InstanceContextMode.Single,
+       ConcurrencyMode = ConcurrencyMode.Multiple)]
     public class MyService : IMyService
     {
+        [WebInvoke(Method = "GET",
+                    ResponseFormat = WebMessageFormat.Json,
+                    UriTemplate = "json")]
         public void GetJson()
         {
         }
